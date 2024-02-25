@@ -1,0 +1,16 @@
+type Item {
+    id: ID!
+    name: String
+    price: Float
+}
+
+type Query {
+    findAll: [Item]
+    findById(id:ID): Item
+}
+
+type Mutation {
+    createItem(name: String, description: String, quantity: Int, price: Float) : Item
+    updateItem(id: ID, name: String, description: String, quantity: Int, price: Float) : Item
+    deleteItem(id: ID) : Item
+}
